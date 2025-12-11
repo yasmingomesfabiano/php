@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <form action="processar1.php" method="post">
+        <label for="nome">Nome: </label>
+        <input type="text" name="nome" id="nome" required>
+        <br><br>
+
+        <label for="destino">Escolha onde enviar o Formulário: </label>
+        <select name="destino" id="destino" required>
+            <option value="">Selecione</option>
+            <option value="processar1.php">processar 1</option>
+            <option value="processar2.php">processar 2</option>
+            <option value="processar3.php">processar 3</option>
+        </select>
+        <br><br>
+
+        <input type="submit" value="Enviar">
+    </form>
+    <script>
+        //alterar a ação do formulário
+        document.getElementById("formulario").addEventListener("submit",function(e){
+            var destino= document.getElementById("destino").value;
+            if(!destino){
+                e.preventDefault();
+                alert("Por favor, selecione um destino para envio.");
+            }else{
+                this.action= destino;
+            }
+        });
+    </script>
+    
+</body>
+</html>
