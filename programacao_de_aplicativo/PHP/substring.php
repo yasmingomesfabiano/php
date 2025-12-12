@@ -1,5 +1,5 @@
 <?
-    $seuqncia= "A,B,C,D,E,F,G";
+    $sequencia= "A,B,C,D,E,F,G";
     $elementos= explode(",", $sequencia); //explode:("separador", "string_original")
     
     echo $elementos[0];

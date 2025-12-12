@@ -1,5 +1,5 @@
 <?php
-    $seuqncia= "A,B,C,D,E,F,G";
+    $sequencia= "A,B,C,D,E,F,G";
     $elementos= explode(",", $sequencia);
     $a= 10;
     $b= 10;
